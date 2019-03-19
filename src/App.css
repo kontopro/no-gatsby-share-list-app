@@ -1,0 +1,459 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-size: calc(16px + 0.5vw);
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #fefefe;
+    width: 100%;
+}
+
+.site {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: inherit;
+}
+/* header (nav only if logged in) */
+header {
+    margin: 0 0 10px 0;
+    width: 100%;
+    background: #fff;
+}
+
+header>.site-logo {
+    width: 100%;
+    overflow: hidden;
+}
+header>.site-logo>img {
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    header>.site-logo>img  {
+        height: 60vh;
+        object-fit: cover;
+    }
+}
+header>.site-title {
+    width: 100%;
+}
+header>.site-title>h1 {
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 1.9em;
+    color: #008000;
+}
+header>.site-title>h1>span {
+    color: #008000;
+    border-bottom: 2px solid; 
+}
+/* home */
+main.home {
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px auto;
+}
+@media screen and (min-width: 480px) {
+    main.home {
+        padding: 0 10px;
+    }
+}
+/* welcome and login */
+main.home>.login-welcome{
+    width:100%;
+    margin: 0 auto;
+    max-width: 350px;
+    padding: 10px;
+    border: 2px solid hsla(0, 0%, 83%, .9);
+    box-shadow: 0 4px 8px 0 hsla(0, 0%, 93%, .2);
+    background: #f5f5f5;
+}
+main.home>.login-welcome>.title{
+    font-size: 19px;
+}
+main.home>.login-welcome>.subtitle>p>span{
+    color: #0000ff;
+    font-family: sans-serif ;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-style: oblique;
+    background: #ffff00;
+    padding: 4px 8px;
+    box-shadow: 0 2px 4px 0 hsla(0,0%,0%, 0.1);
+}
+main.home>.login-welcome>.subtitle{
+    font-size: 17px;
+}
+main.home>.login-welcome>.sign-in>button:disabled{
+    cursor: not-allowed;
+}
+main.home>.login-welcome>.sign-in>button{
+    cursor: pointer;
+    border:1px solid;
+    padding: 8px 16px;
+    margin: 10px 0;
+    border-radius: 4px;
+    color: #fafafa;
+}
+main.home>.login-welcome>.sign-in>button.facebook{
+    background: #0000cd;
+}
+    
+main.home>.login-welcome>.sign-in>button.google{
+    background: #b22222;
+}
+
+/* cards of group-lists */
+main>.my-cards{
+    width:100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+main>.my-cards>.new-list{
+    border-top: 4px solid green;
+    width: 350px;
+    max-width: 100%;
+    color: #4a4a4a;
+    margin: 10px auto;
+    box-shadow: 0 4px 6px 0 hsla(0,0%,0%, 0.2);
+    background: #fff;
+}
+main>.my-cards>.new-list>.card-title{
+    color: #232323;
+    margin: 20px auto;
+}
+main>.my-cards>.new-list>form{
+    width:90%;
+    margin: 0 auto;
+}
+main>.my-cards>.new-list>form>label{
+    color:#737373;
+}
+main>.my-cards>.new-list>form>label>input{
+    margin: 10px auto;
+    border: none;
+    width: 100%;
+    height: 40px;
+    box-shadow: inset 0 2px 4px 0 hsla(0,0%,0%, 0.2);
+}
+main>.my-cards>.new-list>form>button:disabled{
+    cursor: not-allowed;
+    box-shadow: 0 2px 4px 0 hsla(0, 0%, 83%, .2);
+    font-size: 22px;
+}
+main>.my-cards>.new-list>form>button{
+    font-size: 25px;
+    border:none;
+    border-radius: 4px;
+    background: #008000;
+    box-shadow: 0 4px 8px 0 hsla(0, 0%, 93%, .2);
+    color: #ffffff;
+    padding: 8px 16px;
+    margin: 15px auto;
+    cursor: pointer;
+}
+main>.my-cards>.family-card {
+    display: flex;
+    flex-flow: column;
+    flex: 1 0 350px;
+    border-radius: 15px;
+    width: 350px;
+    max-width: 100%;
+    color: #4a4a4a;
+    margin: 15px auto;
+    box-shadow: 0 4px 6px 0 hsla(0,0%,0%, 0.2);
+    background: #fff;
+}
+main>.my-cards>.family-card button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border:none;
+    padding:8px 16px;
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    border-radius: 4px;
+    background: inherit;
+    margin-right: 20px;
+}
+main>.my-cards>.family-card>.card-header {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #daa520e6;
+}
+
+main>.my-cards>.mine>.card-header {
+    background: #5fb2cd;
+}
+main>.my-cards>.family-card>.card-header>.card-title {
+    color: #f5f5f5;
+    margin:15px auto -10px;
+    flex:1 1 auto;
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+main>.my-cards>.family-card>.card-header>.card-subtitle {
+    flex: 1 1 auto;
+    font-size: 16px;
+    color: #d3d3d3;
+}
+main>.my-cards>.family-card>.card-content{
+    flex: 1 1 auto;
+}
+main>.my-cards>.family-card>.card-content>.card-members-title {
+    color:#737373;
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+main>.my-cards>.family-card>.card-content>.no-members {
+    font-size: 16px;
+    margin-top:0;
+}
+main>.my-cards>.family-card>.card-content>.card-member {
+    font-size: 18px;
+    color: #00000099;
+    width: 95%;
+    margin: 5px auto;
+    padding: 0;
+    height: 40px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    display:flex;
+    align-items: center;
+}
+main>.my-cards>.family-card>.card-content>.card-member>.card-member-email {
+    width: 85%;
+    overflow: hidden;
+}
+main>.my-cards>.family-card>.card-content>.card-member>.card-member-del {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+main>.my-cards>.family-card>.card-content>.card-member>.card-member-del>button {
+    font-size: 18px;
+    padding:0 4px;
+    color: #808080;
+    box-shadow: 0 1px 2px 0 hsla(0,0%,0%, 0.1);
+}
+main>.my-cards>.family-card>.card-content>.card-add-member {
+    display: table;
+    width: 95%;
+    margin: 10px auto;
+}
+main>.my-cards>.family-card>.card-content>.card-add-member>label {
+    font-size: 19px;
+    color: #808080;
+    width: 100%;
+    margin-top: 8px;
+}
+main>.my-cards>.family-card>.card-content>.card-add-member>input {
+    width: 75%;
+    margin-top: 8px;
+    padding-left: 15px;
+    float: left;
+    height: 35px;
+    border: none;
+    box-shadow: inset 0 1px 2px 0 hsla(0,0%,0%, 0.1);
+    font-size: 17px;
+}
+main>.my-cards>.family-card>.card-content>.card-add-member>.card-add-member-btn {
+    height: 40px;
+    width: 25%;
+    float: left;
+    margin-top: 5px;
+    display:flex;
+    align-items: center;
+}
+main>.my-cards>.family-card>.card-content>.card-add-member>.card-add-member-btn>button {
+    font-size: 20px;
+    width: 50px;
+    box-shadow: 0 1px 2px 0 hsla(0,0%,0%, 0.1);
+    padding: 2px 4px;
+    margin: 0 auto;
+    color: #008000;
+}
+main>.my-cards>.family-card>.card-content>.card-add-member>.card-add-member-btn>button:disabled {
+    width: 40px;
+    font-size: 18px;
+    color: #808080;
+    cursor: not-allowed;
+
+}
+main>.my-cards>.family-card>.card-footer {
+    margin-top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #f7f7f7;
+    margin-bottom:0;
+    width: 100%;
+    flex: 0 1 60px;
+}
+
+main>.my-cards>.family-card>.card-footer>button.card-delete {
+    border: 1px solid goldenrod;
+    padding: 6px 12px;
+    color: #666666;
+    font-weight: 200;
+}
+main>.my-cards>.mine>.card-footer>button.card-delete {
+    border: 1px solid #5fb2cd;
+}
+main>.my-cards>.family-card>.card-footer>button.card-visit {
+    text-transform: capitalize;
+    background: #daa520;
+    color: #f5f5f5;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2);
+}
+main>.my-cards>.mine>.card-footer>button.card-visit {
+    background: #5fb2cd;
+    color: #f5f5f5;
+}
+
+/* list styling */
+
+main.home>.back-home button:hover {
+    box-shadow: 0 4px 8px 0 hsla(0,0%,0%, 0.1);
+}
+main.home>.back-home button>span {
+    margin: 0 auto;
+}
+main.home>.back-home button {
+    box-shadow: 0 2px 5px 0 hsla(0,0%,0%, 0.1);
+    padding: 4px 16px 8px 16px;
+    font-size: 25px;
+    border:none;
+    background: #808080;
+    color: #e0ffff;
+    border-radius: 8px;
+}
+main.home>.main-list {
+    width: 100%;
+    max-width: 350px;
+    margin:0 auto;
+}
+main.home>.main-list>p {
+    color: #808080;
+    font-size: 30px;
+    width: max-content;
+    display: block;
+    margin:20px auto;
+    padding: 5px 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-weight: 400;
+    background: #ffff0099;
+}
+main.home>.main-list>form{
+    width: 95%;
+    height: 40px;
+    margin: 15px auto;
+}
+main.home>.main-list>form>input{
+    width: 80%;
+    height: 40px;
+    border: none;
+    box-shadow: inset 0 2px 4px 0 hsla(0,0%,0%, 0.2);
+}
+main.home>.main-list>form>button:disabled{
+    box-shadow: inset 0 2px 4px 0 hsla(0,0%,0%, 0.2);
+    color: #7f7f7f;
+    font-size: 18px;
+}
+main.home>.main-list>form>button{
+    border: none;
+    height: 40px;
+    color: #008000;
+    font-size: 22px;
+    width: 20%;
+    background: none;
+    box-shadow: inset 0 4px 8px 0 hsla(0,0%,0%, 0.1);
+}
+main.home>.main-list>.task-list {
+    width:95%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+main.home>.main-list>.task-list>.task {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 50px;
+    box-shadow: 0 2px 4px 0 hsla(0,0%,0%, 0.1);
+    border-radius: 4px;
+    margin-top:5px;
+    background: #fff;
+}
+main.home>.main-list>.task-list>.task>.task-name {
+    width: 80%;
+    cursor: pointer;
+}
+
+main.home>.main-list>.task-list>.task>.task-checked>.task-delete {
+    font-size: 20px;
+    width: 10%;
+    margin-left: 5px;
+    border: none;
+    box-shadow: 0 1px 2px 0 hsla(0,0%,0%, 0.3);
+    float: left;
+    background: inherit;
+    color: #c30000;
+}
+main.home>.main-list>.task-list>.task>.task-mark {
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    background: #fefefe;
+    color: #d3d3d333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hsla(0, 0%, 83%, .4);
+}
+
+main.home>.main-list>.task-list>.task>label.task-checked {
+    color: #bfbfbf;
+}
+
+main.home>.main-list>.task-list>.task>input[type=checkbox] {
+    display: none;
+}
+   
+main.home>.main-list>.task-list>.task>input[type=checkbox]:checked + label {
+    color: #4a4a4a;
+}
+
+
+/* footer */
+footer{
+    margin-top: 15px;
+    background: #ffffff;
+    width: 100%;
+}
+footer>.title>p>span{
+    border-bottom: 3px solid sandybrown;
+}
+
+footer>.user-name{
+    background: #e0ffff;
+    box-shadow: 0 2px 4px 0 #00000033;
+    color: #808080;
+}
+footer>.user-name button{
+    cursor: pointer;
+    margin: 10px 15px;
+    border:none;
+    background: #808080;
+    border-radius: 4px;
+    color: #e0ffff;
+    padding: 4px 8px;
+}
